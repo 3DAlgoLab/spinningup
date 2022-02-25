@@ -1,0 +1,1 @@
+python -m spinup.run ppo --hid "[32,32]" --env LunarLander-v2 --exp_name installtest --gamma 0.999 --num_cpu 4

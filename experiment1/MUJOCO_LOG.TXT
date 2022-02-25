@@ -1,0 +1,6 @@
+Fri Feb 25 14:43:50 2022
+ERROR: OpenGL version 1.5 or higher required
+
+Fri Feb 25 18:34:48 2022
+ERROR: GLEW initalization error: Missing GL version
+
