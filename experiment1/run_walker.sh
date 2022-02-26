@@ -1,1 +1,1 @@
-python -m spinup.run ppo --env Walker2d-v3 --exp_name walker
+python -m spinup.run ppo --env Walker2d-v3 --exp_name walker3 --cpu 8

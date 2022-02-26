@@ -382,7 +382,7 @@ class EpochLogger(Logger):
                     super().log_tabular('Min' + key, stats[2])
             self.epoch_dict[key] = []
         except Exception as e:
-            breakpoint()
+            # breakpoint()
             pass
 
     def get_stats(self, key):
