@@ -11,17 +11,14 @@ def mlp(x, sizes, activation=tf.tanh, output_activation=None):
 
 def train(env_name='CartPole-v0', hidden_sizes=[32], lr=1e-2, 
           epochs=50, batch_size=5000, render=False):
-
     # make environment, check spaces, get obs / act dims
     env = gym.make(env_name)
     assert isinstance(env.observation_space, Box), \
         "This example only works for envs with continuous state spaces."
     assert isinstance(env.action_space, Discrete), \
         "This example only works for envs with discrete action spaces."
-
     obs_dim = env.observation_space.shape[0]
     n_acts = env.action_space.n
-
     # make core of policy network
     obs_ph = tf.placeholder(shape=(None, obs_dim), dtype=tf.float32)
     logits = mlp(obs_ph, sizes=hidden_sizes+[n_acts])
